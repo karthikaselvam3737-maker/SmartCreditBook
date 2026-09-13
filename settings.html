@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings - Smart Credit Book</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            📒 Smart Credit Book
+        </div>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="customers.html">👤 Customers</a>
+            <a href="purchase.html">🛒 Purchases</a>
+            <a href="credit.html">📒 Credit Book</a>
+            
+            <a href="reports.html">📊 Reports</a>
+            <a href="settings.html" class="active">⚙️ Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>Settings</h1>
+                <p>Manage your Smart Credit Book settings</p>
+            </div>
+
+        </header>
+
+
+        <!-- Shop Settings -->
+        <div class="panel">
+
+            <div class="panel-header">
+                <h2>🏪 Shop Information</h2>
+            </div>
+
+            <div class="form-group">
+
+                <label>Shop Name</label>
+
+                <input
+                    type="text"
+                    id="shopName"
+                    placeholder="Enter shop name"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Owner Name</label>
+
+                <input
+                    type="text"
+                    id="ownerName"
+                    placeholder="Enter owner name"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Phone Number</label>
+
+                <input
+                    type="text"
+                    id="shopPhone"
+                    placeholder="Enter phone number"
+                >
+
+            </div>
+
+
+            <button
+                class="primary-btn"
+                onclick="saveSettings()"
+            >
+                💾 Save Settings
+            </button>
+
+        </div>
+
+
+        <!-- Reminder Settings -->
+        <div class="panel">
+
+            <div class="panel-header">
+                <h2>🔔 Payment Reminders</h2>
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    Reminder Threshold
+                </label>
+
+                <input
+                    type="number"
+                    id="reminderDays"
+                    value="7"
+                    min="1"
+                >
+
+                <p>
+                    Customers with pending payments can be
+                    reminded after the selected number of days.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Currency -->
+        <div class="panel">
+
+            <div class="panel-header">
+                <h2>💰 Currency</h2>
+            </div>
+
+            <div class="form-group">
+
+                <label>Select Currency</label>
+
+                <select id="currency">
+
+                    <option value="₹">₹ - Indian Rupee</option>
+                    <option value="$">$ - US Dollar</option>
+                    <option value="€">€ - Euro</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

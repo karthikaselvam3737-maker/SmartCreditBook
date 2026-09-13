@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports - Smart Credit Book</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            📒 Smart Credit Book
+        </div>
+
+        <nav>
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="customers.html">👤 Customers</a>
+    <a href="purchase.html">🛒 Purchases</a>
+    <a href="credit.html">📒 Credit Book</a>
+    
+    <a href="reports.html" class="active">📊 Reports</a>
+    <a href="settings.html">⚙️ Settings</a>
+</nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="header">
+
+            <div>
+                <h1>Reports</h1>
+                <p>View your shop sales and payment summary</p>
+            </div>
+
+        </header>
+
+
+        <!-- Summary Cards -->
+        <section class="cards">
+
+            <div class="card">
+                <div class="card-icon">🛒</div>
+
+                <div>
+                    <p>Total Sales</p>
+                    <h2 id="reportSales">₹0</h2>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">💰</div>
+
+                <div>
+                    <p>Total Collected</p>
+                    <h2 id="reportPaid">₹0</h2>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">⏳</div>
+
+                <div>
+                    <p>Total Due</p>
+                    <h2 id="reportDue">₹0</h2>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">📈</div>
+
+                <div>
+                    <p>Collection Rate</p>
+                    <h2 id="reportRate">0%</h2>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Sales Report -->
+        <div class="panel">
+
+            <div class="panel-header">
+                <h2>📊 Sales Report</h2>
+                <span>All Purchases</span>
+            </div>
+
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Total Amount</th>
+                        <th>Paid</th>
+                        <th>Due</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+
+                <tbody id="reportTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

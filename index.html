@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Credit Book</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            📒 Smart Credit Book
+        </div>
+
+        <nav>
+    <a href="index.html" class="active">🏠 Dashboard</a>
+    <a href="customers.html">👤 Customers</a>
+    <a href="purchase.html">🛒 Purchases</a>
+    <a href="credit.html">📒 Credit Book</a>
+    
+    <a href="reports.html">📊 Reports</a>
+    <a href="settings.html">⚙️ Settings</a>
+</nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome back, Shop Owner 👋</p>
+            </div>
+
+            <div class="profile">
+                👤 Admin
+            </div>
+
+        </header>
+
+
+        <!-- Summary Cards -->
+        <section class="cards">
+
+    <div class="card">
+        <div class="card-icon">👥</div>
+        <div>
+            <p>Total Customers</p>
+            <h2 id="dashboardCustomers">0</h2>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">💰</div>
+        <div>
+            <p>Total Due</p>
+            <h2 id="dashboardDue">₹0</h2>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">🛒</div>
+        <div>
+            <p>Today's Sales</p>
+            <h2 id="dashboardSales">₹0</h2>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">📈</div>
+        <div>
+            <p>Collection Rate</p>
+            <h2 id="dashboardRate">0%</h2>
+        </div>
+    </div>
+
+</section>
+
+        <!-- Dashboard Content -->
+        <section class="dashboard-grid">
+
+            <!-- AI Alerts -->
+            <div class="panel">
+
+                <div class="panel-header">
+                    <h2>🤖 AI Suggestions</h2>
+                    <span>Today</span>
+                </div>
+
+                <div id="aiSuggestions"></div>
+            </div>
+
+
+            
+
+        </section>
+
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

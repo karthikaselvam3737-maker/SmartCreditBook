@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers - Smart Credit Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">📒 Smart Credit Book</div>
+
+        <nav>
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="customers.html" class="active">👤 Customers</a>
+    <a href="purchase.html">🛒 Purchases</a>
+    <a href="credit.html">📒 Credit Book</a>
+    
+    <a href="#">📊 Reports</a>
+    <a href="#">⚙️ Settings</a>
+</nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="header">
+            <div>
+                <h1>Customers</h1>
+                <p>Manage your grocery shop customers</p>
+            </div>
+
+            <button class="add-btn" onclick="openCustomerForm()">
+                + Add Customer
+            </button>
+        </header>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchCustomer"
+                placeholder="🔍 Search customer by name or phone..."
+                onkeyup="searchCustomers()"
+            >
+        </div>
+
+        <div class="panel">
+
+            <div class="panel-header">
+                <h2>Customer List</h2>
+                <span id="customerCount">0 Customers</span>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Total Purchase</th>
+                        <th>Total Due</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="customerTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="modal" id="customerModal">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2>➕ Add New Customer</h2>
+                    <button onclick="closeCustomerForm()">×</button>
+                </div>
+
+                <label>Customer Name</label>
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter customer name"
+                >
+
+                <label>Phone Number</label>
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Enter phone number"
+                >
+
+                <label>Address</label>
+                <textarea
+                    id="customerAddress"
+                    placeholder="Enter address"
+                ></textarea>
+
+                <button class="save-btn" onclick="addCustomer()">
+                    Save Customer
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

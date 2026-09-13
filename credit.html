@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Credit Book - Smart Credit Book</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            📒 Smart Credit Book
+        </div>
+
+        <nav>
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="customers.html">👤 Customers</a>
+    <a href="purchase.html">🛒 Purchases</a>
+    <a href="credit.html" class="active">📒 Credit Book</a>
+    
+    <a href="reports.html">📊 Reports</a>
+    <a href="settings.html">⚙️ Settings</a>
+</nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>Credit Book</h1>
+                <p>Track customer dues and payment status</p>
+            </div>
+
+        </header>
+
+
+        <!-- Summary Cards -->
+        <section class="cards">
+
+    <div class="card">
+        <div class="card-icon">💰</div>
+        <div>
+            <p>Total Credit</p>
+            <h2 id="totalCredit">₹0</h2>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">⏳</div>
+        <div>
+            <p>Pending Customers</p>
+            <h2 id="pendingCustomers">0</h2>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">✅</div>
+        <div>
+            <p>Collected This Month</p>
+            <h2 id="collectedAmount">₹0</h2>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">🔔</div>
+        <div>
+            <p>Reminders</p>
+            <h2 id="reminderCount">0</h2>
+        </div>
+    </div>
+
+</section>
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="creditSearch"
+                placeholder="🔍 Search customer..."
+                onkeyup="searchCreditCustomers()"
+            >
+
+        </div>
+
+
+        <!-- Credit Table -->
+        <div class="panel">
+
+            <div class="panel-header">
+
+                <h2>📒 Customer Credit Details</h2>
+
+                <span>View Details</span>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Customer</th>
+                        <th>Phone</th>
+                        <th>Total Purchase</th>
+                        <th>Paid</th>
+                        <th>Due</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="creditTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- Reminder Panel -->
+
+        <div class="panel reminder-panel">
+
+    <div class="panel-header">
+        <h2>🔔 Payment Reminders</h2>
+        <span>Pending Payments</span>
+    </div>
+
+    <div id="reminderList">
+        <p>No pending payments.</p>
+    </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
